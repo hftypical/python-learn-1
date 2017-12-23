@@ -1,0 +1,446 @@
+input any integar or value.
+
+a = int(input("Enter value of first variable: "))
+b = int(input("Enter value of second variable: "))
+
+
+
+
+Python Program to Print all Numbers in a Range Divisible by a Given Number
+--------------------------
+a=float(3)
+
+
+for b in range(1,100,1):
+    c=b/a
+    if (int(c)==float(c)):
+     print b
+
+--------------
+
+Python Program to Find the Sum of Digits in a Number
+
+-------------
+a=321
+b=a/100
+c=(a%100)/10
+d=a%10
+print b
+print c
+print d
+sum=b+c+d
+print sum
+////////
+n=int(input("Enter a number:"))
+tot=0
+while(n>0):
+    dig=n%10
+    print dig
+    tot=tot+dig
+    print tot
+    n=n//10
+    print n
+print("The total sum of digits is:",tot)
+--------------
+
+Python Program to Sort the List According to the Second Element in Sublist
+----------------
+a=[['a',6],['b',5]]
+b=[['c',8],['d',7]]
+
+
+for i in range(0,2):
+  if (a[1][i]< b[1][i]):
+      print a[i][i]
+
+--------------------
+Python Program to Find the Second Largest Number in a List Using Bubble Sort
+-------------
+
+a=[4,2,5,11,24,56,87,98,7,8]
+for j in range(0,len(a)):
+    for k in range(0,len(a)-j-1):
+       if (a[k]>a[k+1]):
+           temp = a[k]
+           a[k] = a[k + 1]
+           a[k + 1] = temp
+          
+
+print a
+------------------
+
+
+Python Program to Remove the nth Index Character from a Non-Empty String
+------------------------------
+a=str("listen")
+b=str("silent")
+
+print a
+print b
+
+for i in range(6):
+    for j in range(6):
+     if a[i]==b[j]:
+        print i,j
+        print a[i],b[j]
+--------------------------
+
+Python Program to Count the Number of Vowels in a String
+-----------------------
+a=str("geeksforgeeks portal")
+b=str("aieou")
+count=0
+for i  in range(len(a)):
+    for j in range(len(b)):
+       if a[i]==b[j]:
+           count+=1
+print count
+
+-------------
+
+
+Python Program to Calculate the Number of Upper Case Letters and Lower Case Letters in a String
+--------------------------
+
+string=raw_input("Enter string:")
+upper=0
+lower=0
+for i in string:
+      if(i.islower()):
+            upper=upper+1
+      else:
+          lower=lower+1
+
+print("The number of lowercase characters is:")
+print(upper,lower)
+---------------------
+
+
+Python Program to Read a List of Words and Return the Length of the Longest One
+---------------------
+
+a=["apple","cat","bat","high","love","lovely"]
+temp=""
+for i in range(len(a)):
+    for j in range(len(a)-i):
+
+        if len(a[i-1])>len(a[i]):
+            temp=a[i]
+            a[i]=a[i-1]
+            a[i-1]=temp
+print a
+print a[-1]
+------------------------
+
+Python Program to Multiply Two Matrices
+----------------------
+
+a=[[1,2],[3,4]]
+b=[[5,6],[7,8]]
+c=[[0,0],[0,0]]
+for j in range(len(a)):
+    for k in range(len(a)):
+     c[j][k]=a[j][k]*b[j][k]
+     print c[j][k]
+---------------
+
+
+Python Program to Remove the Duplicate Items from a List
+------------------
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    a.append(element)
+b = set()
+unique = []
+for x in a:
+    if x not in b:
+        unique.append(x)
+        b.add(x)
+print("Non-duplicate items:")
+print(unique)
+---------------
+
+
+Python Program to Count the Occurrences of Each Word in a Given String Sentence
+----------------
+
+string=raw_input("enter the string:")
+word=raw_input("enter the word:")
+c=[]
+c=string.split(' ')
+print c
+count=0
+for i in range(len(c)):
+    if (word==c[i]):
+        count+=1
+print count
+-------------
+
+
+TO RENAME MULTIPLE FILES.
+--------------------
+
+import os
+
+print os.getcwd()
+print os.chdir('C:\Users\GUR29899\Desktop\lovely\lovely\marriage')
+
+for a in os.listdir('C:\Users\GUR29899\Desktop\lovely\lovely\marriage'):
+ file_name,file_ext= os.path.splitext(a)
+ constant, variable=file_name.split('_')
+ variable=variable.strip()
+ hello=('{}_{}{}'.format(constant,variable,file_ext))
+ print a
+ print hello
+ os.rename(a,hello)
+
+
+---------------------
+
+Python Program to Read the Contents of a File
+
+import os
+
+print os.getcwd()
+print os.chdir('C:\Users\GUR29899\Desktop\lovely\lovely')
+print os.listdir('C:\Users\GUR29899\Desktop\lovely\lovely')
+with open ('hello.txt','r') as f:
+    f_contents=f.read()
+    print f_contents
+---------------------
+
+Python Program to Count the Number of Words in a Text File
+
+
+import os
+
+print os.getcwd()
+print os.chdir('C:\Users\GUR29899\Desktop\lovely\lovely')
+print os.listdir('C:\Users\GUR29899\Desktop\lovely\lovely')
+a=0
+with open ('dummy.txt','r') as f:
+    for word in f:
+
+        a += 1
+
+
+    print a
+----------------
+Python Program that Reads a Text File and Counts the Number of Times a Certain Letter Appears in the Text File
+
+print os.getcwd()
+print os.chdir('C:\Users\GUR29899\Desktop\lovely\lovely')
+
+
+count=0
+
+c='a'
+with open('dummy2.txt', 'r') as fr:
+   for line in fr:
+       words=line.split()
+       for word in words:
+            for letter in word:
+                if letter==c:
+                    count+=1
+print count
+print type(fr)
+print type(words)
+print type(word)
+print type(letter
+-------------------------
+
+Python Program to Read a Text File and Print all the Numbers Present in the Text File
+
+print os.getcwd()
+print os.chdir('C:\Users\GUR29899\Desktop\lovely\lovely')
+
+
+count=0
+
+c=['0','1']
+with open('dummy2.txt', 'r') as fr:
+   for line in fr:
+       words=line.split()
+       for word in words:
+            for letter in word:
+                if (letter.isupper()):
+                    print letter
+                    count+=1
+print count
+
+------------------------
+
+how to search data from external files.
+
+
+import re
+import os
+
+print os.getcwd()
+count=0
+with open('dummy1.txt','r') as f:
+    contents=f.read()
+
+pattern=re.compile(r'([a-zA-Z]{12})+\.([a-zA-Z]{11})+\.([a-zA-Z]{3})')
+matches=pattern.findall(contents)
+for match in matches:
+    print match
+    count+=1
+print count
+
+
+-------------
+how to create config file
+
+import os
+import ConfigParser
+
+config=ConfigParser.ConfigParser()
+config.add_section("test")
+config.set("test","option1","val1")
+config.set("test","option2","val2")
+file=open("test.cfg",'w')
+config.write(file)
+file.close()
+
+-------------------
+how to read config file.
+
+import os
+import ConfigParser
+
+config=ConfigParser.ConfigParser()
+config.read("PMSReporting.conf")
+sections=config.sections()
+print config
+print sections
+for section in sections:
+    options=config.options(section)
+    for option in options:
+        value=config.get(section,option)
+        print value,options
+=================================
+
+how to fetch data from mongodb using python
+#!/usr/bin/python
+import pymongo
+
+
+
+
+connection = pymongo.MongoClient("localhost",27017)
+db = connection.lovely
+collection = db.numbers
+data=collection.find()
+print(data)
+i=0
+while(i<100):
+ for value in data:
+        print(value)
+        i+=1
+        print(i)
+        break
+======================
+fetch data from db and copy it into the excel file.
+
+#!/usr/bin/python
+import pymongo
+import csv
+import os
+import configparser
+import csv
+import datetime
+from datetime import datetime,timedelta,date
+
+
+
+
+
+config=configparser.ConfigParser()
+config.read("values.conf")
+
+
+connection = pymongo.MongoClient(config.get("CommonData","dburl"),int(config.get("CommonData","dbport")))
+db = connection.lovely
+collection = db.numbers
+data=collection.count()
+with open('data2.csv','w+') as output:
+ for j in range(0,24):
+     output1=csv.writer(output)
+     cIsoDate1=datetime.now().replace(hour=j,minute=0, second=0,microsecond=0).isoformat()
+     output1.writerow([cIsoDate1,data])
+========================
+count 35 heads and 94 legs among the chickens and rabbits in a farm. How many rabbits and how many chickens do we have?
+    
+a=3
+b=5
+c=0
+d=1
+e=1
+for j in range(1,129,1):
+    for k in range(1, 129, 1):
+        if ((j*3+k*5)==129):
+            if (j+k==35):
+                print(j,k)
+
+======================
+write a program which prints all permutations of [1,2,3]
+
+for j in range(1,4,1):
+    for k in range(1,4, 1):
+        for l in range(1,4,1):
+          if (j!=k) and (k!=l) and (l!=j):
+              print(j,k,l)
+
+=====================
+
+program which remove digits from string.
+
+a="a34o5w69r81d"
+b=[""]
+for char in a:
+    if char.isalpha():
+        b.append(char)
+print(b)
+===============
+
+how to convert list into set
+
+a=[12,12,24,35,24,88,120,155,88,120,155]
+b=set(a)
+print(b)
+
+==================
+program to print the list after removing the 0th,4th,5th numbers in [12,24,35,70,88,120,155]
+a= [12,24,35,70,88,120,155]
+for i in range(0,len(a),2):
+    print(a[i])
+
+=========================
+
+time elapsed in program.
+import time
+
+start = time.time()
+for i in range(1001111):
+     print(i)
+end = time.time()
+print(end - start)
+
+====================
+print all prime numbers in range.
+for j in range(2,1000,1):
+    for i in range(2,j,1):
+        if (j % i) == 0:
+
+            break
+    else:
+           print(j, "is a prime number")
+=======================
+
+
+
+
+
